@@ -1,0 +1,10 @@
+#include <stdlib.h>
+#include <time.h>
+
+/* More header goas there */
+
+/* batty style doc for funcation main goes there */
+int main (void)
+{
+
+
