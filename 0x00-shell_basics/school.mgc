@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 \n0 string SCHOOL School data\n!:mime School
+=======
+0 string SCHOOL School data
+n!:mime School
+>>>>>>> 3989a516c165c6be4267cff3bc41d331290fe457
 file -C -m school.mgc
