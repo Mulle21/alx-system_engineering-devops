@@ -1,4 +1,4 @@
-#!/usr/bin/env bas
+#!/usr/bin/env bash
 #loop 10 iterations and three especific conditionals
 i="0"
 while [ $i -lt 10 ]
