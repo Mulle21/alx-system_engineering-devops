@@ -7,11 +7,10 @@ do
 	then
 		echo "bad luck"
 	elif ((i == 7))
-	then
+	then 
 		echo "good luck"
 	else
-		echo "best luck"
-
+		echo "Best School"
 	fi
 	((i++))
 done
