@@ -12,6 +12,6 @@ for subdomain in "www" "lb-01" "web-01" "web-02"
 do
     if [ -z "$2" ] || [ "$2" == "$subdomain" ] ;
     then
-	display_info "$1" "$subdomain"
+	display_info "$1" "$domain"
     fi
 done
