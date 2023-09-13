@@ -1,5 +1,10 @@
-SendEnv LANG LC_*
-    HashKnownHosts yes
-    GSSAPIAuthentication yes
-    PasswordAuthentication no
-    IdentityFile ~/.ssh/school
+#!/usr/bin/env bash
+# SSH client configration
+
+Host *
+   PasswordAuthentication no
+   IdentityFile ~/.ssh/school
+   SendEnv LANG LC_*
+   HashKnownHosts yes
+   GSSAPIAuthentication no
+ 
