@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Set up the ssh configuration file:
 
-file { 'ect/ssh/ssh_config':
+file { 'etc/ssh/ssh_config':
 	endure => present,
 
 content =>"
