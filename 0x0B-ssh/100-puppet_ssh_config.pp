@@ -1,19 +1,15 @@
-#!/usr/bin/env bash
-# Set up the ssh configuration file:
+# Setting up my client config file
+include stdlib
 
-file { 'etc/ssh/ssh_config':
-	endure => present,
-
-content =>"
-
-	#SSH CLINET CONFIGURATION
-	host*
-	IdentityFile ~/.ssh/school
-	PasswordAuthentication no
-	",
+file_line { 'Turn off passwd auth':
+  ensure => present,
+  path   => '/etc/ssh/ssh_config',
+  line   => '    PasswordAuthentication no',
+  replace => true,
 }
-# Set up the ssh configuration file
-exec { 'configuration_file':
-  command => 'sed -i "s|PasswordAuthentication yes|PasswordAuthentication no", /etc/ssh/ssh_config',
-  path    => '/bin',
-}
+
+file_line { 'Delare identity file':
+  ensure => present,
+  path   => '/etc/ssh/ssh_config',
+  line   => '     IdentityFile ~/.ssh/school',
+  replace => true,
