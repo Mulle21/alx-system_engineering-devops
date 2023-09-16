@@ -1,10 +1,6 @@
-# ssh setup
-
-file_line { 'Declare identity file':
-  path => '/etc/ssh/ssh_config',
-  line => 'IdentityFile ~/.ssh/holberton',
+#!/usr/bin/env bash
+# Set up the ssh configuration file
+exec { 'configuration_file':
+  command => 'sed -i "s|PasswordAuthentication yes|PasswordAuthentication no", /etc/ssh/ssh_config',
+  path    => '/bin',
 }
-
-file_line { 'Turn off passwd auth':
-  path => '/etc/ssh/ssh_config',
-  line => 'PasswordAuthentication no',
