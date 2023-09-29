@@ -1,7 +1,7 @@
 # Setting up my client config file
 # puppet configuration
 
-file { 'etc/ssh/ssh_config':
+file { 'etc/ssh/ssh_cofig':
  	ensure => present,
 
 content =>"
