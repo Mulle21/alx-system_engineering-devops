@@ -1,8 +1,6 @@
 # Modify client config file
-include stdlib
 
-file_line {
-  'password_auth':
+file_line { ' pasword_auth':
     ensure => present,
     path   => '/etc/ssh/ssh_config',
     line   => '    PasswordAuthentication no'
