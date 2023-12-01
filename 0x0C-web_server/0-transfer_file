@@ -9,10 +9,10 @@ fi
 
 #assigiing paramental to variables
 
-path_to_files=$1
+path_to_file=$1
 ip=$2
 username=$3
-path_to_ssh_key-$4
+path_to_ssh_key=$4
 
 #disabbling
 
