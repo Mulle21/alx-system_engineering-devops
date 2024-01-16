@@ -18,4 +18,4 @@ def number_of_subscribers(subreddit):
         return results.get("subscribers")
     except (Exception):
         print('Not Found')
-        return (0)i
+        return (0)
