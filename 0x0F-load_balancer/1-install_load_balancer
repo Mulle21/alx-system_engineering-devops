@@ -38,4 +38,5 @@ listen hbnb
     server 126060-web-01 34.202.164.102 check
     server 126060-web-02 54.145.80.224 check
 " >> /etc/haproxy/haproxy.cfg
-service haproxy start
+
+~                                  
