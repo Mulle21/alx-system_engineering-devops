@@ -35,7 +35,7 @@ defaults
   timeout http-request 10s
 
 frontend clickviral-tech-frontend
-    bind *:80
+    bind 0:80
     default_backend clickviral-tech-backend
 
 backend clickviral-tech-backend
