@@ -34,11 +34,11 @@ defaults
   timeout server 15s
   timeout http-request 10s
 
-frontend-http
+frontend web-backend
     bind *:80
-    default_backend-httpd
+    default_backend web-backend
 
-backend-http
+backend web-backend
     balance roundrobin
     server 126060-web-01 3.84.237.237:80 check
     server 126060-web-02 54.209.118.216:80 check
