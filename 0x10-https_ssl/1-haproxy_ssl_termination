@@ -33,19 +33,19 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend server-frontend
-        bind *:80
-        mode http
-        http-request redirect scheme https code 301 unless { ssl_fc }
-        http-request set-header X_Forwarded-Proto http
-        default_backend server-backend
+frontend mulle-tech-frontend
+    bind *:80
+    mode http
+    http-request redirect scheme https code 301 unless { ssl_fc }
+    http-request set-header X_Forwarded-Proto http
+    default_backend mulle-tech-backend
 
-frontend server-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/mulle-21.tech.pem
-        http-request set-header X-Forwarded-Proto https
-        default_backend clickviral-backend
+frontend mulle-tech-frontend-https
+     bind *:443 ssl crt /etc/haproxy/certs/www.mulle-21.tech.pem
+     http-request set-header X-Forwarded-Proto https
+     default_backend mulle-tech-backend
 
-backend server-backend
-        balance roundrobin
-        server 126060-web-01 3.84.237.237:80 check
-        server 126060-web-02 54.209.118.216:80 check
+backend mulle-tech-backend
+    balance roundrobin
+    server 126060-web-01 3.84.237.237:80 check
+    server 126060-web-02 54.209.118.216:80 check
